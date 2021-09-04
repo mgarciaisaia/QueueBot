@@ -18,9 +18,9 @@ class Configs:
     # ############################################################### #
 
     # Emojis utilizados
-    emojis = ['👍', '👎', '➡️', '❌']
+    emojis = os.getenv("QUEUEBOT_EMOJIS", '👍,👎,➡️,❌').split(',')
     # Como se debe invocar al bot
-    prefijoBot = "!queue"
+    prefijoBot = os.getenv("QUEUEBOT_PREFIJO", "!queue")
     # Aliases de comandos
     comandoCreate = "create"
     comandoList = "list"
